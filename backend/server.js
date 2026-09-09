@@ -57,7 +57,7 @@ app.post('/api/habits', (req, res) => {
   };
 
   habits.push(newHabit);
-  res.status(201).json(newHabit);
+  return res.status(200).json(newHabit);
 });
 
 app.patch('/api/habits/:id/toggle', (req, res) => {

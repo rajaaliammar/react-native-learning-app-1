@@ -98,11 +98,14 @@ function HabitStreakBuilder() {
     try {
       const response = await fetch(API_URL, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({title: trimmed, category}),
       });
 
-      if (!response.ok) {
+      if (response.status !== 200 && response.status !== 201) {
         throw new Error('Failed to create habit');
       }
 
