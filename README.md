@@ -11,7 +11,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 To start the Metro dev server, run the following command from the root of your React Native project:
 
 ```sh
-# Using npm
+# Using npm                
 npm start                          
                                                
 # OR using Yarn
